@@ -1,0 +1,53 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- The main content view -->
+
+
+
+    <fragment android:layout_above="@+id/content_frame" xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent" android:id="@+id/map"
+        tools:context="io.hackathon.edelivery.ViewOrders"
+        android:name="com.google.android.gms.maps.SupportMapFragment" />
+       <!-- The navigation drawer -->
+    <!--<ListView android:id="@+id/left_drawer"-->
+        <!--android:layout_width="240dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_gravity="start"-->
+        <!--android:choiceMode="singleChoice"-->
+        <!--android:divider="@android:color/transparent"-->
+        <!--android:dividerHeight="0dp"-->
+        <!--android:background="#111"/>-->
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/content_frame" android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        >
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtOrderId" android:hint="Change another"
+            android:textSize="16pt"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:singleLine="true"
+            android:maxLines="1"
+            />
+        <Button
+            android:layout_width="wrap_content" android:layout_alignParentRight="true"
+            android:text="Change"
+            android:layout_height="wrap_content"
+            android:onClick="onClickChange"
+            />
+
+    </RelativeLayout>
+</RelativeLayout>
+
+
